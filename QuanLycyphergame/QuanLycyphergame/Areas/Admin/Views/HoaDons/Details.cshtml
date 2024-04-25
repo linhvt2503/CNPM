@@ -1,0 +1,97 @@
+﻿@model QuanLycyphergame.Models.HoaDon
+
+@{
+    ViewBag.Title = "Chi tiết hóa đơn";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content my-2">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong class="text-danger">CHI TIẾT ĐƠN GIÁ</strong>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a href="@Url.Action("Edit", "HoaDons", new { id = Model.ID_HoaDon })" class="btn-sm btn-success"> <i class="fa fa-edit"> Sửa</i></a>
+                        <a href="@Url.Action("Index", "HoaDons")" class="btn-sm btn-info"> <i class="fa fa-long-arrow-alt-left"></i> Quay lại</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ID_HoaDon)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ID_May)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ID_TTDV)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ThoiGianMo)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ThoiGianTat)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ID_HoaDon)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TongTien)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TinhTrangHD)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ID_KhachHang)
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => model.ID_HoaDon)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.ID_May)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.ID_TTDV)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.ThoiGianMo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.ThoiGianTat)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.TongTien)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.TinhTrangHD)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.ID_KhachHang)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /.card-body -->
+            </div>
+        </div>
+        <!-- /.card -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
